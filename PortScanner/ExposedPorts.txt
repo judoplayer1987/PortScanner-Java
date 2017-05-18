@@ -1,0 +1,12 @@
+localhost is listening on port 443
+localhost is listening on port 631
+localhost is listening on port 902
+localhost is listening on port 1716
+localhost is listening on port 5355
+localhost is listening on port 6942
+localhost is listening on port 7532
+localhost is listening on port 7533
+localhost is listening on port 8307
+localhost is listening on port 38154
+localhost is listening on port 39901
+localhost is listening on port 63342
