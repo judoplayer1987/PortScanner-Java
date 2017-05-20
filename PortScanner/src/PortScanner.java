@@ -6,6 +6,8 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class PortScanner {
     public static void main(String[] args) throws Exception {
@@ -20,6 +22,7 @@ public class PortScanner {
         FileOutputStream out = null;
         out = new FileOutputStream("ExposedPorts.txt");
 
+        List<Integer> portlist = new ArrayList<>();
         String hostName = inetAddress.getHostName();
         //Scanning target
         for (int port = 0; port <= 65535; port++) {
@@ -30,14 +33,20 @@ public class PortScanner {
                 System.out.println(text);
                 out.write(text.getBytes());
                 socket.close();
+                portlist.add(port);
             } catch (IOException e) {
                 String s = hostName + " is not listening on port " + port;
                 System.out.println(s);
             }
         }
+        File PortReference = new File("Portlist.txt");
+        for(int port: portlist){
+
+
+        }
         //For loop to cycle thru open ports and compare against portlist.txt goes here
-            //Read ExposedPorts.txt line by line
-            //Cast each line as a list
+            //Read PortList ArrayList
+
             //use [-1] to catch the port
             //Save port to variable
             //Search thru Portlist.txt for saved variable
